@@ -12,6 +12,11 @@ app.use(cors())
 // Middleware to parse JSON bodies
 app.use(express.json());
 
+app.post('/pixel', (req, res) => {
+    console.log("pixelreq", req.body)
+    return res.status(201).json({nada: "wao"})
+})
+
 // POST /create to create a frame with a specific UUID
 app.post('/create', (req, res) => {
     const uuid = req.body.uuid; // Assuming UUID is sent in the request body
@@ -46,6 +51,7 @@ app.get("/frame/:uuid", async (req, res) => {
 
 // POST /frame/:uuid/actions/click
 app.post('/frame/:uuid/actions/click', (req, res) => {
+    console.log("reqwas", req)
     const uuid = req.params.uuid;
     console.log(`Click action received for frame with UUID: ${uuid}`);
     const resp = {
