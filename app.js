@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.post('/pixel', (req, res) => {
     console.log("pixelreq", req.body)
-    return res.status(201).json({nada: "wao"})
+    return res.status(201).json({ nada: "wao" })
 })
 
 // POST /create to create a frame with a specific UUID
@@ -38,10 +38,18 @@ app.get("/frame/:uuid", async (req, res) => {
     // })
     // console.log("frame", frame);
     const resp = {
-        advertiser: "",
+        // advertiser: "pudgy pengu tees",
+        // advertiser: "base cats",
+        advertiser: "blu pengu",
         id: uuid,
-        img: "https://sample-videos.com/img/Sample-png-image-5mb.png",
-        url: "",
+        // img: "https://sample-videos.com/img/Sample-png-image-5mb.png",
+        // url: "",
+        // img: "https://sothebys-md.brightspotcdn.com/dims4/default/cae787c/2147483647/strip/true/crop/2000x2000+0+0/resize/1024x1024!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2F56%2Fe8%2Fe34be74e4180a974f016b2de17f3%2F80741.png",
+        // url: "https://shop.pudgypenguins.com/products/custom-pudgy-penguins-tee-2",
+        // img: "https://cdn.mint.fun/5ede3c3212ff3e6d023aa6ac6144a72ac96693849c1d142f45ddd81835a23761?format=auto",
+        // url: "https://mint.fun/base/0xdDdC17AFA03afc66e4178ff1B36E5b2237303a21",
+        img: "https://quickstart-935a95fe.myshopify.com/cdn/shop/files/IMG_1302.jpg",
+        url: "https://quickstart-935a95fe.myshopify.com/products/pengu?utm_source=adbase",
         title: "hello",
         description: "this si reall",
     }
